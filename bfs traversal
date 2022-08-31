@@ -3,7 +3,7 @@ class Solution
 {
 	public static ArrayList<Integer> bfsOfGraph ( int V, ArrayList<ArrayList<Integer>> adj ){
 	    ArrayList<Integer> bfs = new ArrayList<>() ;
-	    boolean []vis = new boolean[i + 1] ;
+	    boolean []vis = new boolean[V + 1] ;
 	    
 	    for ( int i = 1 ; i < vis.length ; i++ ){
 	        if (vis[i] == false){
