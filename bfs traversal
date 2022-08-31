@@ -1,0 +1,33 @@
+import java.util.* ;
+class Solution
+{
+	public static ArrayList<Integer> bfsOfGraph ( int V, ArrayList<ArrayList<Integer>> adj ){
+	    ArrayList<Integer> bfs = new ArrayList<>() ;
+	    boolean []vis = new boolean[i + 1] ;
+	    
+	    for ( int i = 1 ; i < vis.length ; i++ ){
+	        if (vis[i] == false){
+	            
+	            Queue<Integer> q = new Queue<>() ;
+	            q.add(i) ;
+	            vis[i] = true ;
+	            
+	            while (!q.isEmpty()){
+	                
+	                Integer node = q.poll() ;
+	                bfs.add(node) ;
+	                for ( Integer x : adj.get(node)){
+	                    if (vis[x] == false){
+    	                    q.add(x) ;
+    	                    vis[x] = true ;
+	                    }
+	                }
+	            }
+	        }
+	    }
+	    
+	    return bfs ;
+	    
+	    
+	}
+}
